@@ -11,10 +11,10 @@ import java.util.Formatter;
 
 public class ReportLong implements ITestReport{
 
-    private static int MIN_WIDE_REPORT = 32;
-    private static int LENGTH_WORD_CURRENT_DATE = 15;
-    private static int LENGTH_HOURS_COURSE = 4;
-    private static int LENGTH_NUMBER_COURSE = 3;
+    private static final int MIN_WIDE_REPORT = 32;
+    private static final int LENGTH_WORD_CURRENT_DATE = 15;
+    private static final int LENGTH_HOURS_COURSE = 4;
+    private static final int LENGTH_NUMBER_COURSE = 3;
 
     @Override
     public void printReport(Student[] students, LocalDateTime currentTime) {

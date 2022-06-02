@@ -9,10 +9,14 @@ import java.time.ZoneOffset;
 
 public class CoursesStatus {
 
-    /** int Array contain holiday day in 2022 year */
-    private static final int[] HOLIDAY = { 1, 3, 7, 67, 114, 121, 129, 163, 179, 235, 287, 359 };
-    /** int Array contain holiday day in 2022 year */
-    private static final int[] DAYOFF = { 105 };
+    /**
+     * int Array contain holiday day in 2022 year
+     */
+    private static final int[] HOLIDAY = {1, 3, 7, 67, 114, 121, 129, 163, 179, 235, 287, 359};
+    /**
+     * int Array contain holiday day in 2022 year
+     */
+    private static final int[] DAYOFF = {105};
 
     public static LocalDateTime getStartDate(LocalDateTime startDate) {
 
@@ -32,10 +36,8 @@ public class CoursesStatus {
     /**
      * Procedure calculate end time for current student.
      *
-     * @param startDate
-     *            - when student start to learn curriculum
-     * @param timetable
-     *            - curriculum of student
+     * @param startDate - when student start to learn curriculum
+     * @param timetable - curriculum of student
      * @return time when student finished timetable
      */
     public static LocalDateTime getEndDate(LocalDateTime startDate, TrainingCenterTimetable timetable) {

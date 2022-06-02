@@ -18,16 +18,13 @@ public class Student {
     private LocalDateTime endDate;
 
     /**
-     * @param studentFullName
-     *            - contain full student name
-     * @param courseTimetable
-     *            - student timetable
-     * @param startDate
-     *            - student started learning date
+     * @param studentFullName - contain full student name
+     * @param courseTimetable - student timetable
+     * @param startDate       - student started learning date
      */
     public Student(String studentFullName, TrainingCenterTimetable courseTimetable, LocalDateTime startDate) {
         this.studentFullName = studentFullName;
-        this.courseTimetable= courseTimetable;
+        this.courseTimetable = courseTimetable;
         this.startDate = CoursesStatus.getStartDate(startDate);
         this.endDate = CoursesStatus.getEndDate(startDate, courseTimetable);
     }

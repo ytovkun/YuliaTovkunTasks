@@ -16,13 +16,13 @@ public class StudentUnitTests {
     private CoursesStatus coursesStatus;
     private LocalDateTime todayTime = LocalDateTime.now();
     private LocalDateTime todayPlusTenDaysTime = LocalDateTime.now().plusDays(10);
-    private static final int expectedWorkingHoursDiff = 32;
-    Course[] courseList = new Course[] {
+    private static final int EXPECTED_WORKING_HOURS_DIFF = 32;
+    Course[] courseList = new Course[]{
             new Course("Test Design", 16),
-            new Course("Page Object", 16) };
+            new Course("Page Object", 16)};
 
     TrainingCenterTimetable j2EEDeveloper =
-            new TrainingCenterTimetable ("J2EE Developer", courseList[0], courseList[1]);
+            new TrainingCenterTimetable("J2EE Developer", courseList[0], courseList[1]);
 
     Student student =
             new Student("Ivanov Ivan", j2EEDeveloper, todayTime);
@@ -41,6 +41,6 @@ public class StudentUnitTests {
     @Test
     public void workingHoursBetweenTwoDateTest() {
         Assert.assertEquals("Working hours are not correct",
-                expectedWorkingHoursDiff, getDiffWorkTimeInHours(student, todayTime));
+                EXPECTED_WORKING_HOURS_DIFF, getDiffWorkTimeInHours(student, todayTime));
     }
 }
